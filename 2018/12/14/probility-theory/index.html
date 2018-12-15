@@ -104,18 +104,20 @@
 
 
 
-  <meta name="description" content="distributionGaussian distributiondefined over a D-dimensional vector $\mathbf { x }$ of continuous variables, \mathcal { N } ( \mathbf { x } | \boldsymbol { \mu } , \mathbf { \Sigma } ) = \frac { 1 }">
+  <meta name="description" content="distributionGaussian distributiondefined over a D-dimensional vector $\mathbf { x }$ of continuous variables,  \mathcal { N } ( \mathbf { x } | \boldsymbol { \mu } , \mathbf { \Sigma } ) = \frac { 1 }">
 <meta name="keywords" content="machine learning">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Notes of Probability Theory and machine learning">
 <meta property="og:url" content="http://yoursite.com/2018/12/14/probility-theory/index.html">
 <meta property="og:site_name" content="dang&#39;s blog">
-<meta property="og:description" content="distributionGaussian distributiondefined over a D-dimensional vector $\mathbf { x }$ of continuous variables, \mathcal { N } ( \mathbf { x } | \boldsymbol { \mu } , \mathbf { \Sigma } ) = \frac { 1 }">
+<meta property="og:description" content="distributionGaussian distributiondefined over a D-dimensional vector $\mathbf { x }$ of continuous variables,  \mathcal { N } ( \mathbf { x } | \boldsymbol { \mu } , \mathbf { \Sigma } ) = \frac { 1 }">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-15T06:59:43.942Z">
+<meta property="og:image" content="http://yoursite.com/2018/12/14/probility-theory/MLE.png">
+<meta property="og:updated_time" content="2018-12-15T07:57:34.934Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Notes of Probability Theory and machine learning">
-<meta name="twitter:description" content="distributionGaussian distributiondefined over a D-dimensional vector $\mathbf { x }$ of continuous variables, \mathcal { N } ( \mathbf { x } | \boldsymbol { \mu } , \mathbf { \Sigma } ) = \frac { 1 }">
+<meta name="twitter:description" content="distributionGaussian distributiondefined over a D-dimensional vector $\mathbf { x }$ of continuous variables,  \mathcal { N } ( \mathbf { x } | \boldsymbol { \mu } , \mathbf { \Sigma } ) = \frac { 1 }">
+<meta name="twitter:image" content="http://yoursite.com/2018/12/14/probility-theory/MLE.png">
 
 
 
@@ -356,7 +358,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-12-15 14:59:43" itemprop="dateModified" datetime="2018-12-15T14:59:43+08:00">2018-12-15</time>
+                <time title="Modified: 2018-12-15 15:57:34" itemprop="dateModified" datetime="2018-12-15T15:57:34+08:00">2018-12-15</time>
               
             
           </span>
@@ -390,43 +392,46 @@
 
       
         <h1 id="distribution"><a href="#distribution" class="headerlink" title="distribution"></a>distribution</h1><h2 id="Gaussian-distribution"><a href="#Gaussian-distribution" class="headerlink" title="Gaussian distribution"></a>Gaussian distribution</h2><p>defined over a D-dimensional vector $\mathbf { x }$ of continuous variables,</p>
-<p>\mathcal { N } ( \mathbf { x } | \boldsymbol { \mu } , \mathbf { \Sigma } ) = \frac { 1 } { ( 2 \pi ) ^ { D / 2 } } \frac { 1 } { | \mathbf { \Sigma } | ^ { 1 / 2 } } \exp \left\{ - \frac { 1 } { 2 } ( \mathbf { x } - \boldsymbol { \mu } ) ^ { \mathrm { T } } \mathbf { \Sigma } ^ { - 1 } ( \mathbf { x } - \boldsymbol { \mu } ) \right\}</p>
 <script type="math/tex; mode=display">
-### maximiza likelihood estimation
-suppose that $\mathbf{x}=(x_1,\cdots,x_N)^T$ is a set of observations. Data points are i.i.d. Suppose the observations are from gaussian distribution whose mean $\mu$ and variance $\sigma$.</script><p>p ( \mathbf { x } | \mu , \sigma ^ { 2 } ) = \prod _ { n = 1 } ^ { N } \mathcal { N } \left( x _ { n } | \mu , \sigma ^ { 2 } \right)</p>
+\mathcal { N } ( \mathbf { x } | \boldsymbol { \mu } , \mathbf { \Sigma } ) = \frac { 1 } { ( 2 \pi ) ^ { D / 2 } } \frac { 1 } { | \mathbf { \Sigma } | ^ { 1 / 2 } } \exp \left\{ - \frac { 1 } { 2 } ( \mathbf { x } - \boldsymbol { \mu } ) ^ { \mathrm { T } } \mathbf { \Sigma } ^ { - 1 } ( \mathbf { x } - \boldsymbol { \mu } ) \right\}</script><h3 id="maximiza-likelihood-estimation"><a href="#maximiza-likelihood-estimation" class="headerlink" title="maximiza likelihood estimation"></a>maximiza likelihood estimation</h3><p>suppose that $\mathbf{x}=(x_1,\cdots,x_N)^T$ is a set of observations. Data points are i.i.d. Suppose the observations are from gaussian distribution whose mean $\mu$ and variance $\sigma$.</p>
 <script type="math/tex; mode=display">
-maximization of the log of a function is equivalent to maximization of the function itself. 
-The log function can be written in the form</script><p>\ln p ( \mathbf { x } | \mu , \sigma ^ { 2 } ) = - \frac { 1 } { 2 \sigma ^ { 2 } } \sum _ { n = 1 } ^ { N } \left( x _ { n } - \mu \right) ^ { 2 } - \frac { N } { 2 } \ln \sigma ^ { 2 } - \frac { N } { 2 } \ln ( 2 \pi )</p>
+p ( \mathbf { x } | \mu , \sigma ^ { 2 } ) = \prod _ { n = 1 } ^ { N } \mathcal { N } \left( x _ { n } | \mu , \sigma ^ { 2 } \right)</script><p>maximization of the log of a function is equivalent to maximization of the function itself.<br>The log function can be written in the form </p>
 <script type="math/tex; mode=display">
-Maximizing that equation with respect to $\mu$, we obtain the maximum likelihood solution given by</script><p>\mu _ { \mathrm { ML } } = \frac { 1 } { N } \sum _ { n = 1 } ^ { N } x _ { n }</p>
+\ln p ( \mathbf { x } | \mu , \sigma ^ { 2 } ) = - \frac { 1 } { 2 \sigma ^ { 2 } } \sum _ { n = 1 } ^ { N } \left( x _ { n } - \mu \right) ^ { 2 } - \frac { N } { 2 } \ln \sigma ^ { 2 } - \frac { N } { 2 } \ln ( 2 \pi )</script><p>Maximizing that equation with respect to $\mu$, we obtain the maximum likelihood solution given by </p>
 <script type="math/tex; mode=display">
-Similarly, maximizing the euqation with respect to $\sigma^2$, we obtain the maximum likelihood solution for the variance in the form</script><p>\sigma _ { \mathrm { ML } } ^ { 2 } = \frac { 1 } { N } \sum _ { n = 1 } ^ { N } \left( x _ { n } - \mu _ { \mathrm { ML } } \right) ^ { 2 }</p>
+\mu _ { \mathrm { ML } } = \frac { 1 } { N } \sum _ { n = 1 } ^ { N } x _ { n }</script><p>Similarly, maximizing the euqation with respect to $\sigma^2$, we obtain the maximum likelihood solution for the variance in the form </p>
 <script type="math/tex; mode=display">
-![MLE](probility-theory/MLE.png)
-Consider the expectations of these quantities with respect to the data set values. It is straightforward to show that</script><p>\begin{aligned} \mathbb { E } \left[ \mu _ { \mathrm { ML } } \right] &amp; = \mu \\ \mathbb { E } \left[ \sigma _ { \mathrm { ML } } ^ { 2 } \right] &amp; = \left( \frac { N - 1 } { N } \right) \sigma ^ { 2 } \end{aligned}</p>
+\sigma _ { \mathrm { ML } } ^ { 2 } = \frac { 1 } { N } \sum _ { n = 1 } ^ { N } \left( x _ { n } - \mu _ { \mathrm { ML } } \right) ^ { 2 }</script><p><img src="/2018/12/14/probility-theory/MLE.png" alt="MLE"><br>Consider the expectations of these quantities with respect to the data set values. It is straightforward to show that </p>
 <script type="math/tex; mode=display">
-so that on average the maximum likelyhood estimation will obtain the correct mean but will understimate the true variance bv a factor $\frac{N-1}{N}$
-The unbiased variance parameter is</script><p>\widetilde { \sigma } ^ { 2 } = \frac { N } { N - 1 } \sigma _ { \mathrm { ML } } ^ { 2 } = \frac { 1 } { N - 1 } \sum _ { n = 1 } ^ { N } \left( x _ { n } - \mu _ { \mathrm { ML } } \right) ^ { 2 }</p>
+\begin{aligned} \mathbb { E } \left[ \mu _ { \mathrm { ML } } \right] & = \mu \\ \mathbb { E } \left[ \sigma _ { \mathrm { ML } } ^ { 2 } \right] & = \left( \frac { N - 1 } { N } \right) \sigma ^ { 2 } \end{aligned}</script><p>so that on average the maximum likelyhood estimation will obtain the correct mean but will understimate the true variance bv a factor $\frac{N-1}{N}$<br>The unbiased variance parameter is </p>
 <script type="math/tex; mode=display">
-The variance is systematically under-estimated because iti si measured relative to the sample mean and not relative to the true mean. 
-
-### Curve fitting 
-Here we retur nto the curve fitting example and view from a probabilistic perspective, therby gaining some insights into error functions and regularizaton. 
-Curve fitting makes predictions for the target variable $t$ given some new value of the input variable $x$ on the basis of a set of training datacomprising $N$ input values $ $\matbf{x} = \left(x_1,\cdots,x_N \right)^T$thbf{t} = \left(t_1,\dotc,t)N \right)^T and t} =e\left(t_1,\dotc,t)N \right)^T$. 
-We shall assume that, given the value of $x$, the corresponding value of $t$ has a Gassian distribution with a mean equal to the value $y\left(x \mathbf{w}\right)$.
-Thus we have</script><p>p ( t | x , \mathbf { w } , \beta ) = \mathcal { N } ( t | y ( x , \mathbf { w } ) , \beta ^ { - 1 } )</p>
+\widetilde { \sigma } ^ { 2 } = \frac { N } { N - 1 } \sigma _ { \mathrm { ML } } ^ { 2 } = \frac { 1 } { N - 1 } \sum _ { n = 1 } ^ { N } \left( x _ { n } - \mu _ { \mathrm { ML } } \right) ^ { 2 }</script><p>The variance is systematically under-estimated because iti si measured relative to the sample mean and not relative to the true mean. </p>
+<h3 id="Curve-fitting"><a href="#Curve-fitting" class="headerlink" title="Curve fitting"></a>Curve fitting</h3><p>Here we consider the curve fitting example and view from a probabilistic perspective, therby gaining some insights into error functions and regularizaton.<br>Curve fitting makes predictions for the target variable $t$ given some new value of the input variable $x$ on the basis of a set of training datacomprising $N$ input values $\mathbf{x} = \left(x_1,\cdots,x_N \right)^T$ and $\mathbf{t} = \left(t_1,\cdots,t)N \right)^T$.<br>We shall assume that, given the value of $x$, the corresponding value of $t$ has a Gassian distribution with a mean equal to the value $y\left(x, \mathbf{w}\right)$.<br>Thus we have </p>
 <script type="math/tex; mode=display">
-We now use the trianing data $\left\{ \mathbf{x}, \mathbf{t} \right\}$ to determine the values of the unknown parameters $\mathbf{w}$ and $\beta$ by maximum likelihood.
-Assumed the data is i.i.d. the likelihood function is given by</script><p>p ( \mathbf { t } | \mathbf { x } , \mathbf { w } , \beta ) = \prod _ { n = 1 } ^ { N } \mathcal { N } \left( t _ { n } | y \left( x _ { n } , \mathbf { w } \right) , \beta ^ { - 1 } \right)</p>
+p ( t | x , \mathbf { w } , \beta ) = \mathcal { N } ( t | y ( x , \mathbf { w } ) , \beta ^ { - 1 } )</script><p>We now use the trianing data $\left\{ \mathbf{x}, \mathbf{t} \right\}$ to determine the values of the unknown parameters $\mathbf{w}$ and $\beta$ by maximum likelihood.<br>Assumed the data is i.i.d. the likelihood function is given by </p>
 <script type="math/tex; mode=display">
-Maximize the logarithm of the likelihood function.</script><p>\ln p ( \mathbf { t } | \mathbf { x } , \mathbf { w } , \beta ) = - \frac { \beta } { 2 } \sum _ { n = 1 } ^ { N } \left\{ y \left( x _ { n } , \mathbf { w } \right) - t _ { n } \right\} ^ { 2 } + \frac { N } { 2 } \ln \beta - \frac { N } { 2 } \ln ( 2 \pi )</p>
+p ( \mathbf { t } | \mathbf { x } , \mathbf { w } , \beta ) = \prod _ { n = 1 } ^ { N } \mathcal { N } \left( t _ { n } | y \left( x _ { n } , \mathbf { w } \right) , \beta ^ { - 1 } \right)</script><p>Maximize the logarithm of the likelihood function. </p>
 <script type="math/tex; mode=display">
-We therefore see that maximizing likelihood is equivalent to minimizing the sum of squares error function. 
-Thus the sum of squares error function has arisen as a consequence of maximizing likelihood under the assumptino of a Gaussian noise distribution. 
-That equation is equal maximizing with respect to $\beta$ gives</script><p>\frac { 1 } { \beta _ { \mathrm { ML } } } = \frac { 1 } { N } \sum _ { n = 1 } ^ { N } \left\{ y \left( x _ { n } , \mathbf { w } _ { \mathrm { ML } } \right) - t _ { n } \right\} ^ { 2 }</p>
+\ln p ( \mathbf { t } | \mathbf { x } , \mathbf { w } , \beta ) = - \frac { \beta } { 2 } \sum _ { n = 1 } ^ { N } \left\{ y \left( x _ { n } , \mathbf { w } \right) - t _ { n } \right\} ^ { 2 } + \frac { N } { 2 } \ln \beta - \frac { N } { 2 } \ln ( 2 \pi )</script><p>We therefore see that maximizing likelihood is equivalent to minimizing the sum of squares error function.<br>Thus the sum of squares error function has arisen as a consequence of maximizing likelihood under the assumptino of a Gaussian noise distribution.<br>That equation is equal maximizing with respect to $\beta$ gives </p>
 <script type="math/tex; mode=display">
-The predictive distribution that gives the probability distribution over $t$</script><p>p ( t | x , \mathbf { w } _ { \mathrm { ML } } , \beta _ { \mathrm { ML } } ) = \mathcal { N } ( t | y \left( x , \mathbf { w } _ { \mathrm { ML } } \right) , \beta _ { \mathrm { ML } } ^ { - 1 } )</p>
-<p>$$</p>
+\frac { 1 } { \beta _ { \mathrm { ML } } } = \frac { 1 } { N } \sum _ { n = 1 } ^ { N } \left\{ y \left( x _ { n } , \mathbf { w } _ { \mathrm { ML } } \right) - t _ { n } \right\} ^ { 2 }</script><p>The predictive distribution that gives the probability distribution over $t$ </p>
+<script type="math/tex; mode=display">
+p ( t | x , \mathbf { w } _ { \mathrm { ML } } , \beta _ { \mathrm { ML } } ) = \mathcal { N } ( t | y \left( x , \mathbf { w } _ { \mathrm { ML } } \right) , \beta _ { \mathrm { ML } } ^ { - 1 } )</script><p>In Bayesian approach, a prior distribution over the polynomial codfficients $\mathbf{w}$. let us consider a Gaussian distribution of the form </p>
+<script type="math/tex; mode=display">
+p ( \mathbf { w } | \alpha ) = \mathcal { N } ( \mathbf { w } | \mathbf { 0 } , \alpha ^ { - 1 } \mathbf { I } ) = \left( \frac { \alpha } { 2 \pi } \right) ^ { ( M + 1 ) / 2 } \exp \left\{ - \frac { \alpha } { 2 } \mathbf { w } ^ { \mathrm { T } } \mathbf { w } \right\}</script><p>where $\alpha$ is the precision of the distribution, amd $M+1$ is the total number of the elements in the vector $\mathbf{w}$. $\alpha$ is hyperparameters.<br>Using Bayes’ theorem, the posterior distribution for $w$ is proportional to the product of the prior distribution and the likelihood function </p>
+<script type="math/tex; mode=display">
+p ( \mathbf { w } | \mathbf { x }, \mathbf { t } , \alpha , \beta ) \propto p ( \mathbf { t } | \mathbf { x } , \mathbf { w } , \beta ) p ( \mathbf { w } | \alpha )</script><p>This technique is called maximum posterior (MAP). The maximum of the posterior is given by the minimum of </p>
+<script type="math/tex; mode=display">
+\frac { \beta } { 2 } \sum _ { n = 1 } ^ { N } \left\{ y \left( x _ { n } , \mathbf { w } \right) - t _ { n } \right\} ^ { 2 } + \frac { \alpha } { 2 } \mathbf { w } ^ { \mathrm { T } } \mathbf { w }</script><h3 id="Baysian-curve-fitting"><a href="#Baysian-curve-fitting" class="headerlink" title="Baysian curve fitting"></a>Baysian curve fitting</h3><p>Given training data $\mathbf{x}$ and $\mathbf{t}$, along with a new test point $x$, and our goal is predict the value of $t$.<br>The predictive distribution $p ( t | x , \mathbf { x } , \mathbf { t } )$ is evaluated.<br>The predictive distribution can be written in the form </p>
+<script type="math/tex; mode=display">
+p ( t | x , \mathbf { x } , \mathbf { t } ) = \int p ( t | x , \mathbf { w } ) p ( \mathbf { w } | \mathbf { x } , \mathbf { t } ) d \mathbf { w }</script><p>$p ( \mathbf { w } | \mathbf { x } , \mathbf { t } ) d \mathbf { w }$ is the posterior distribution over the parameters.  </p>
+<p>The integration can be performed analytically with the result that the predictive distribution is given by a Gaussian of the form </p>
+<script type="math/tex; mode=display">
+p ( t | x , \mathbf { x } , \mathbf { t } ) = \mathcal { N } ( t | m ( x ) , s ^ { 2 } ( x ) )</script><p>wher the mean and the variance are given by </p>
+<script type="math/tex; mode=display">
+\begin{aligned} m ( x ) & = \beta \phi ( x ) ^ { \mathrm { T } } \mathbf { S } \sum _ { n = 1 } ^ { N } \phi \left( x _ { n } \right) t _ { n } \\ s ^ { 2 } ( x ) & = \beta ^ { - 1 } + \phi ( x ) ^ { \mathrm { T } } \mathbf { S } \phi ( x ) \end{aligned}</script><p>The matrx $\mathbf{S}$ is given by </p>
+<script type="math/tex; mode=display">
+\mathbf { S } ^ { - 1 } = \alpha \mathbf { I } + \beta \sum _ { n = 1 } ^ { N } \phi \left( x _ { n } \right) \phi ( x ) ^ { \mathrm { T } }</script><p>where $\mathbf{I}$ is the unit matrix, and $\phi ( x )$ is the vector with elements $\phi _ { i } ( x ) = x ^ { i } \text { for } i = 0 , \dots , M$</p>
 
       
     </div>
@@ -459,22 +464,6 @@ The predictive distribution that gives the probability distribution over $t$</sc
       
       
 
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2018/12/14/SVM/" rel="next" title="Support Vector Machine">
-                <i class="fa fa-chevron-left"></i> Support Vector Machine
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-          </div>
-        </div>
       
 
       
@@ -541,7 +530,7 @@ The predictive distribution that gives the probability distribution over $t$</sc
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">1</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -593,7 +582,7 @@ The predictive distribution that gives the probability distribution over $t$</sc
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#distribution"><span class="nav-number">1.</span> <span class="nav-text">distribution</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Gaussian-distribution"><span class="nav-number">1.1.</span> <span class="nav-text">Gaussian distribution</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#distribution"><span class="nav-number">1.</span> <span class="nav-text">distribution</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Gaussian-distribution"><span class="nav-number">1.1.</span> <span class="nav-text">Gaussian distribution</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#maximiza-likelihood-estimation"><span class="nav-number">1.1.1.</span> <span class="nav-text">maximiza likelihood estimation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Curve-fitting"><span class="nav-number">1.1.2.</span> <span class="nav-text">Curve fitting</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Baysian-curve-fitting"><span class="nav-number">1.1.3.</span> <span class="nav-text">Baysian curve fitting</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
